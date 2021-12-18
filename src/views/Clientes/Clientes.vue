@@ -7,6 +7,10 @@
       <b-nav-text class="h2">Cadastro de Clientes</b-nav-text>
     </b-nav>
 
+    <div class="input-pesquisa">
+      <input type="text" v-model="pesquisa" placeholder="Buscar cliente" />
+    </div>
+
     <b-form>
       <b-form-group id="input-group-nome" label="Nome:" label-for="input-nome">
         <b-form-input
@@ -27,7 +31,7 @@
       </b-form-group>
 
       <div id="input-group-data-nascimento">
-        <label for="input-data-nascimento">Choose a date:</label>
+        <label for="input-data-nascimento">Escolha uma data:</label>
         <b-form-datepicker
           id="input-data-nascimento"
           v-model="cliente.dataNascimento"
@@ -83,24 +87,24 @@ export default {
         dataNascimento: "",
       },
       clientes: [],
+      pesquisa: "",
     };
   },
   mounted() {
     this.listarClientes();
   },
+  computed: {},
   methods: {
     salvar() {
       if (!this.cliente.id) {
-        // Se não houver um cliente cadastrado, então faça POST
         this.$http
           .post(`/clientes`, {
             nome: this.cliente.nome,
             cpf: this.cliente.cpf,
             dataNascimento: this.cliente.dataNascimento,
-          }) // Senão atualize o cliente
+          })
           .then((response) => {
             console.log(response.data);
-            this.cliente = "";
             this.listarClientes();
           })
           .catch((error) => {
@@ -116,7 +120,6 @@ export default {
           })
           .then((response) => {
             console.log(response.data);
-            this.cliente = "";
             this.listarClientes();
           })
           .catch((error) => {

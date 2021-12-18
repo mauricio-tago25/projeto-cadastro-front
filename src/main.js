@@ -1,3 +1,4 @@
+import 'mdb-vue-ui-kit/css/mdb.min.css'
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 import Vue from 'vue'
