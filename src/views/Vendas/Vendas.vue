@@ -53,8 +53,8 @@
       <thead>
         <tr>
           <th>ID do Cliente</th>
-          <th>Data e Hora</th>
           <th>Valor Total</th>
+          <th>Data e Hora</th>
         </tr>
       </thead>
 

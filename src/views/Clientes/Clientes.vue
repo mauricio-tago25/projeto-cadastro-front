@@ -7,10 +7,6 @@
       <b-nav-text class="h2">Cadastro de Clientes</b-nav-text>
     </b-nav>
 
-    <div class="input-pesquisa">
-      <input type="text" v-model="pesquisa" placeholder="Buscar cliente" />
-    </div>
-
     <b-form>
       <b-form-group id="input-group-nome" label="Nome:" label-for="input-nome">
         <b-form-input

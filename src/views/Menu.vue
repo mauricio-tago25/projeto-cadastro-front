@@ -3,7 +3,7 @@
     <template #header>Projeto de Cadastro</template>
 
     <template #lead>
-      Projeto de cadastro de clientes, de produtos e de vendas.
+      Projeto de cadastro de clientes, de produtos e de vendas utilizando framework Vue.js.
     </template>
 
     <hr class="my-4" />
